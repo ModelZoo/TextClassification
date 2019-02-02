@@ -13,6 +13,10 @@ tf.flags.DEFINE_integer('embedding_size', 200, help='Embedding size')
 class Trainer(BaseTrainer):
     
     def build_word_index(self):
+        """
+        build word index for pad, start and other symbols
+        :return:
+        """
         word_index = imdb.get_word_index()
         word_index = {k: (v + 3) for k, v in word_index.items()}
         word_index['<PAD>'] = 0
@@ -22,6 +26,10 @@ class Trainer(BaseTrainer):
         return word_index
     
     def prepare_data(self):
+        """
+        main prepare data
+        :return:
+        """
         (x_train, y_train), (_, _) = imdb.load_data(num_words=self.flags.vocab_size)
         word_index = self.build_word_index()
         x_train = pad_sequences(x_train, maxlen=250, value=word_index['<PAD>'], padding='post')
