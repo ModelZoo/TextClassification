@@ -1,0 +1,20 @@
+{
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs": 50,
+  "validation_steps": 1,
+  "steps_per_epoch": 0,
+  "early_stop_enable": true,
+  "early_stop_patience": 20,
+  "checkpoint_enable": true,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_name": "model.ckpt",
+  "checkpoint_restore": false,
+  "checkpoint_save_freq": 2,
+  "tensor_board_enable": true,
+  "tensor_board_dir": "events",
+  "model_file": "model",
+  "model_class": "DenseModel",
+  "vocab_size": 10000,
+  "embedding_size": 200
+}
