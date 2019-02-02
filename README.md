@@ -1,7 +1,6 @@
 # TextClassification
 
-TextClassification Model implemented by [ModelZoo](https://github.com/ModelZoo/ModelZoo).
-
+TextClassification Model implemented by [ModelZoo](https://github.com/ModelZoo/ModelZoo). We can use this model to get the positive or negative emotion of movie comments.
 
 ## Installation
 
